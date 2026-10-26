@@ -1,7 +1,6 @@
-import React from 'react';
-import { useMemo } from 'react';
+import React from 'react'
 
-import { InfinityScroll  } from './examples/infinityScroll/infinityScroll.jsx'
+import { InfinityScroll } from './examples/infinityScroll/infinityScroll.jsx'
 
 import { EditableTodos } from './examples/editableTodos/editableTodos.jsx'
 
@@ -11,7 +10,9 @@ import {  OverLappingCircle } from './examples/overLappingCircle/overLappingCirc
 
 import { AnimateDiv } from './examples/animateDiv/animateDiv.jsx'
 
-import { AutocompleteSearchDemo } from './examples/autocompleteSearch/autocompleteSearch.jsx'
+import { AutocompleteSearchDemo } from './examples/autocompleteSearch/autocompleteSearch.jsx' 
+
+import { Carousel } from './examples/carousel/carousel.jsx'
 
 const DefaultComponent = () => {
   return (
@@ -21,7 +22,7 @@ const DefaultComponent = () => {
   )
 }
 
-const componentName = 'AutocompleteSearchDemo'
+const componentName = 'Carousel'
 
 const COMPONENTS = {
   DefaultComponent,
@@ -30,12 +31,13 @@ const COMPONENTS = {
   SimpleModal,
   OverLappingCircle,
   AnimateDiv,
-  AutocompleteSearchDemo
+  AutocompleteSearchDemo,
+  Carousel
 }
 
 function App() {
 
-  const Component = useMemo(() => {
+  const Component = React.useMemo(() => {
     return COMPONENTS[componentName] || DefaultComponent;
   }, [])
 
