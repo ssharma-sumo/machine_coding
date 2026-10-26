@@ -1,0 +1,20 @@
+.todo-item{
+    display: flex;
+    margin-bottom: 10px;
+    .complete-marker{
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        border: 1px solid #ccc;
+    }
+    .completed{
+        background-color: green;
+    }
+
+    .title{
+        margin: 0 20px
+    }
+    .completed-text{
+        text-decoration: line-through;
+    }
+}
